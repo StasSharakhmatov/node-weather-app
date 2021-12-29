@@ -9,7 +9,7 @@ const forecast = (lati, long, callback) => {
         } else if (response.body.error) {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, response.body.location.localtime + " now in " + response.body.location.name + " of " + response.body.location.region + ". Temperature is " + response.body.current.temperature + ". " + response.body.current.weather_descriptions[0] + ".")
+            callback(undefined, response.body.location.localtime + ". " + response.body.location.name + " of " + response.body.location.region + ". Temperature is " + response.body.current.temperature + ". " + response.body.current.weather_descriptions[0] + ". Wind speed is " + response.body.current.wind_speed + ".")
         }
     })
 }
