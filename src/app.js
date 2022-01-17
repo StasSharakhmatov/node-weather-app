@@ -19,22 +19,22 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather',
+        main: 'Weather forecast',
         name: 'Stas'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About me',
+        main: 'Weather forecast',
         name: 'Stas'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'Helpful text',
-        title: 'Help',
+        main: 'Weather forecast',
+        helpText: 'In order to find out the weather forecast in the place you are interested in, enter it in the field "Locations".',
         name: 'Stas'
     })
 })
@@ -70,11 +70,6 @@ app.get('/weather', (req, res) => {
             
         })
     })
-    // res.send({
-    //     location: "Kyiv",
-    //     weather: "19:20. Clean. -1.",
-    //     address: req.query.address
-    // })
 })
 
 app.get('/products', (req, res) => {
